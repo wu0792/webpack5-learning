@@ -23,7 +23,7 @@ class ExtractSourceMapPlugin {
 
         let raw = data.toString()
         let reg = /sourceMappingURL=(.*)$/
-        let after = raw.replace(reg, 'sourceMappingURL=http://192.168.3.239:8000/server/main.js.map')
+        let after = raw.replace(reg, 'sourceMappingURL=http://localhost:8000/main.js.map')
 
         fs.writeFile(path, after, (err) => {
           if (err) throw err;
